@@ -183,7 +183,8 @@ else
 	echo "30. NO"
 fi
 ```
-
+# script1.sh output
+```shell
 hard links in /root/test/links/list_hlink - 2
 hard links in /root/test/list - 2
 hard links in /root/test/links/list_slink - 1
@@ -197,3 +198,4 @@ drwxr-xr-x. 2 root root 4096 Oct 10 22:52 links
 25. YES
 patching file /root/test/man.dir/man.txt
 30. YES
+```
