@@ -142,7 +142,9 @@ mv $test/splited_man-* $test/man.dir
 ```
 
 # 24
+```shell
 cat $test/man.dir/splited_man-* > $test/man.dir/man.txt
+```
 
 # 25
 ```shell
