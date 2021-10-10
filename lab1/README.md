@@ -122,7 +122,9 @@ ls -laAr $test
 ```
 
 # 20
+```shell
 man man > $HOME/man.txt
+```
 
 # 21
 ```shell
