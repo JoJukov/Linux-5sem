@@ -184,7 +184,7 @@ else
 fi
 ```
 # script1.sh output
-```shell
+```
 hard links in /root/test/links/list_hlink - 2
 hard links in /root/test/list - 2
 hard links in /root/test/links/list_slink - 1
