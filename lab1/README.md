@@ -184,3 +184,16 @@ else
 fi
 ```
 
+hard links in /root/test/links/list_hlink - 2
+hard links in /root/test/list - 2
+hard links in /root/test/links/list_slink - 1
+9. YES
+11. NO
+total 16
+drwxr-xr-x. 2 root root 4096 Oct 10 22:52 .sub
+drwxr-xr-x. 2 root root 4096 Oct 10 20:57 man.dir
+-rw-r--r--. 3 root root 3953 Oct 10 22:52 list1
+drwxr-xr-x. 2 root root 4096 Oct 10 22:52 links
+25. YES
+patching file /root/test/man.dir/man.txt
+30. YES
