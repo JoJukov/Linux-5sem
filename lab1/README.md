@@ -7,24 +7,15 @@ mkdir $test 2> /dev/null
 # 2
 ```shell
 list="$test/list"
-dirs=0
-files=0
-touch $list 2> /dev/null
-echo > $list
-for file in $(ls -aA /etc); do
-	if [ -d "/etc/$file" ]; then
-		echo "directory: $file" >> "$list"
-		let dirs++
-	elif [ -f "/etc/$file" ]; then
-		echo "file: $file" >> "$list"
-		let files++
-	fi
+find /etc -maxdepth 1 -type d -printf 'dir %f\n' > $list
+find /etc -maxdepth 1 -type f -printf 'file %f\n' >> $list
 done
 ```
 
 # 3
 ```shell
-echo "$dirs $files" >> "$list"
+find /etc -maxdepth 1 -type d | wc -l >> list
+ls -lAd /etc/.?* | wc -l >> list
 ```
 
 # 4
