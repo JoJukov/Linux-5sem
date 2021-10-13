@@ -118,7 +118,7 @@ cp --backup=t $HOME/list_conf_d $test/.sub
 
 # 19
 ```shell
-ls -laAr $test
+ls -laAR $test
 ```
 
 # 20
