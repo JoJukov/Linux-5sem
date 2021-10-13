@@ -9,13 +9,12 @@ mkdir $test 2> /dev/null
 list="$test/list"
 find /etc -maxdepth 1 -type d -printf 'dir %f\n' > $list
 find /etc -maxdepth 1 -type f -printf 'file %f\n' >> $list
-done
 ```
 
 # 3
 ```shell
-find /etc -maxdepth 1 -type d | wc -l >> list
-ls -lAd /etc/.?* | wc -l >> list
+find /etc -maxdepth 1 -type d | wc -l >> $list
+ls -lAd /etc/.?* | wc -l >> $list
 ```
 
 # 4
