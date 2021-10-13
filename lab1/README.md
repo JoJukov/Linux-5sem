@@ -200,6 +200,15 @@ patching file /root/test/man.dir/man.txt
 30. YES
 ```
 
-
-Защита:
+# Защита:
 Найти в системе самый самый удаленный файл, если их несколько - вывести все. переделать луп в строчку
+```shell
+#!/usr/bin/env sh
+
+max_depth=`find /root -depth -type f -printf '%d\n' | sort -g -r | head -n1`
+find /root -depth -mindepth $max_depth -type f >> README.md
+```
+# output
+```shell
+/root/.git/logs/refs/remotes/origin/master
+```
