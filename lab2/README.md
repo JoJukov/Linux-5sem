@@ -29,7 +29,7 @@ Syncing disks.
 
 # 2
 ```shell
-sudo blkid -s UUID -o value \dev\sda3
+blkid -s UUID -o value \dev\sda3
 ```
 
 # 3
@@ -42,5 +42,6 @@ mkfs -t ext4 -b 4096 /dev/sda3
 ```shell
 
 /dev/sda3: UUID="46038062-225f-41ba-8189-ea99f4d1cd91" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="b86d2976-03"
+
 ```
 </details>
