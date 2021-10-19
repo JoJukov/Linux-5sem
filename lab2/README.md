@@ -40,8 +40,8 @@ mkfs -t ext4 -b 4096 /dev/sda3
 <details>
 <summary>blkid output</summary>
 ```shell
-
-/dev/sda3: UUID="46038062-225f-41ba-8189-ea99f4d1cd91" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="b86d2976-03"
-
+<div>
+ /dev/sda3: UUID="46038062-225f-41ba-8189-ea99f4d1cd91" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="b86d2976-03"
+</div>
 ```
 </details>
