@@ -17,10 +17,29 @@ Command (m for help): Partition type
    e   extended (container for logical partitions)
 Select (default p): 
 Using default response p.
-Partition number (3,4, default 3): First sector (14551040-16777215, default 14551040): Last sector, +sectors or +size{K,M,G,T,P} (14551040-16777215, default 16777215): 
+Partition number (3,4, default 3):
+First sector (14551040-16777215, default 14551040):
+Last sector, +sectors or +size{K,M,G,T,P} (14551040-16777215, default 16777215): +300M
 Created a new partition 3 of type 'Linux' and of size 300 MiB.
 
 Command (m for help): The partition table has been altered.
 Syncing disks.
 ```
 </details>
+
+# 2
+```shell
+sudo blkid -s UUID -o value \dev\sda3
+```
+
+# 3
+```shell
+mkfs -t ext4 -b 4096 /dev/sda3
+```
+
+<details>
+<summary>blkid output</summary>
+```shell
+/dev/sda3: UUID="46038062-225f-41ba-8189-ea99f4d1cd91" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="b86d2976-03"
+```
+<\details>
