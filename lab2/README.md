@@ -39,9 +39,7 @@ mkfs -t ext4 -b 4096 /dev/sda3
 
 <details>
 <summary>
-```shell
 blkid -s TYPE /dev/sda3
-```
 </summary>
    
 ```shell
