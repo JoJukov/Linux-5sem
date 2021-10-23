@@ -52,7 +52,7 @@ blkid -s TYPE /dev/sda3
 dumpe2fs -h /dev/sda3
 ```
 <details>
-<summaty>
+<summary>
 Console output
 </summary>
  
