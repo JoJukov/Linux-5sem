@@ -113,3 +113,11 @@ Journal start:            0
 ```shell
 tune2fs -c 2 -i 2m /dev/sda3
 ```
+<details>
+<summary>Console output</summary>
+```shell
+tune2fs 1.45.6 (20-Mar-2020)
+Setting maximal mount count to 2
+Setting interval between checks to 5184000 seconds
+```
+</details>
