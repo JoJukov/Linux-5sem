@@ -228,3 +228,26 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/sda3       325M  328K  300M   1% /mnt/newdisk
 ```
 </details>
+
+# 11
+
+```shell
+fsck -N /dev/sda3
+```
+
+<details>
+<summary>Console output</summary>
+
+```shell
+fsck from util-linux 2.32.1
+Warning!  /dev/sda3 is mounted.
+Warning: skipping journal recovery because doing a read-only filesystem check.
+/dev/sda3 has been mounted 2 times without being checked, check forced.
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+/dev/sda3: 12/76800 files (0.0% non-contiguous), 6588/89600 blocks
+```
+</details>
