@@ -129,3 +129,13 @@ Setting interval between checks to 5184000 seconds
 mkdir /mnt/newdisk
 mount /dev/sda3 /mnt/newdisk
 ```
+
+<details>
+<summary>mount -t ext4</summary>
+
+```shell
+/dev/mapper/cl-root on / type ext4 (rw,relatime,seclabel)
+/dev/sda1 on /boot type ext4 (rw,relatime,seclabel)
+/dev/sda3 on /mnt/newdisk type ext4 (rw,relatime,seclabel)
+```
+</details>
