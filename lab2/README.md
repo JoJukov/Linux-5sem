@@ -139,3 +139,9 @@ mount /dev/sda3 /mnt/newdisk
 /dev/sda3 on /mnt/newdisk type ext4 (rw,relatime,seclabel)
 ```
 </details>
+
+# 7
+```shell
+ln -s /mnt/newdisk $HOME/newfslink
+```
+
