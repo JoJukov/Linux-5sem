@@ -251,3 +251,36 @@ Pass 5: Checking group summary information
 /dev/sda3: 12/76800 files (0.0% non-contiguous), 6588/89600 blocks
 ```
 </details>
+
+# 12
+
+```shell
+fdisk /dev/sda
+```
+
+<details>
+<summary>Console output</summary>
+
+```shell
+Welcome to fdisk (util-linux 2.32.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): Partition type
+   p   primary (3 primary, 0 extended, 1 free)
+   e   extended (container for logical partitions)
+Select (default e): p 
+Selected partition 4
+First sector (15267840-16777215, default 15267840): 
+Last sector, +sectors or +size{K,M,G,T,P} (15267840-16777215, default 16777215): +12M
+
+Created a new partition 4 of type 'Linux' and of size 12 MiB.
+
+Command (m for help): w
+The partition table has been altered.
+Syncing disks.
+```
+</details>
+
+```shell
