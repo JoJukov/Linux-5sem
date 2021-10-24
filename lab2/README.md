@@ -168,7 +168,7 @@ reboot
 # 10
 <details>
 <summary>
-<p>Before:</p> df -h /dev/sda3
+<strong>Before:</strong> df -h /dev/sda3
 </summary>
 
 ```shell
