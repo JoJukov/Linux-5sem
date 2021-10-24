@@ -499,8 +499,8 @@ mount.cifs //192.168.43.242/FileShare /mnt/share -o vers=3.0
 nano /etc/fstab
 ```
 
-:arrow-down:
+:arrow_down:
 
 ```shell
-//192.168.43.242/FileShare /mnt/share cifs user,rw,password=**** defaults 0 0
+//192.168.43.242/FileShare /mnt/share cifs user,rw,password=**** 0 0
 ```
