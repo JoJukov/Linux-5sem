@@ -284,3 +284,6 @@ Syncing disks.
 </details>
 
 ```shell
+mke2fs -O journal_dev - 4096 /dev/sda4
+tune2fs -j -J device=/dev/sda4
+```
