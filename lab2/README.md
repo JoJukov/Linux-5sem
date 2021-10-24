@@ -108,3 +108,8 @@ Journal sequence:         0x00000001
 Journal start:            0
 ```
 </details>
+
+# 5
+```shell
+tune2fs -c 2 -i 2m /dev/sda3
+```
