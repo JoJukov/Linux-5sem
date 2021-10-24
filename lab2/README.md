@@ -145,3 +145,7 @@ mount /dev/sda3 /mnt/newdisk
 ln -s /mnt/newdisk $HOME/newfslink
 ```
 
+# 8
+```shell
+mkdir $HOME/newfslink/aboba
+```
