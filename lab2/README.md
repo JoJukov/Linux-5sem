@@ -212,9 +212,11 @@ Command (m for help): w
 The partition table has been altered.
 Syncing disks.
 ```
+
+```shell
 e2fsck -f /dev/sda3
 resize2fs /dev/sda3
-
+```
 
 <details>
 <summary>
