@@ -492,6 +492,8 @@ mount /dev/vol_grp1/logical_vol1 /mnt/supernewdisk
 mkdir /mnt/share
 mount.cifs //192.168.43.242/FileShare /mnt/share -o vers=3.0
 ```
+![image](https://user-images.githubusercontent.com/38620771/138611340-53fd722a-f1c7-4df3-90a4-542f3e03413f.png)
+   
 
 # 16
 
