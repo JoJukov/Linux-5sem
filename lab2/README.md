@@ -487,4 +487,10 @@ mkfs.ext4 /dev/vol_grp1/logical_vol1
 mount /dev/vol_grp1/logical_vol1 /mnt/supernewdisk
 ```
 
-#15
+# 15
+```shell
+mkdir /mnt/share
+mount.cifs //192.168.43.242/FileShare /mnt/share -o vers=3.0
+```
+
+# 16
