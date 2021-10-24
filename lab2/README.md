@@ -149,3 +149,18 @@ ln -s /mnt/newdisk $HOME/newfslink
 ```shell
 mkdir $HOME/newfslink/aboba
 ```
+# 9
+```shell
+nano /tec/fstab
+```
+:arrow_down:
+
+```shell
+/dev/sda3 /mnt/newdisk ext4 
+```
+
+:arrow_down:
+
+```shell
+reboot
+```
