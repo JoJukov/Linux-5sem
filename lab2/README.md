@@ -123,3 +123,9 @@ Setting maximal mount count to 2
 Setting interval between checks to 5184000 seconds
 ```
 </details>
+
+# 6
+```shell
+mkdir /mnt/newdisk
+mount /dev/sda3 /mnt/newdisk
+```
