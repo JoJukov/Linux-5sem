@@ -176,3 +176,49 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/sda3       275M  328K  254M   1% /mnt/newdisk
 ```
 </details>
+
+```shell
+umount /dev/sda3
+fdisk /dev/sda
+```
+ 
+In console:
+
+```shell
+Welcome to fdisk (util-linux 2.32.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): d
+Partition number (1-3, default 3): 
+Partition 3 has been deleted.
+
+Command (m for help):
+Partition type
+   p   primary (2 primary, 0 extended, 2 free)
+   e   extended (container for logical partitions)
+Select (default p): 
+
+Using default response p.
+Partition number (3,4, default 3): 
+First sector (14551040-16777215, default 14551040): 
+Last sector, +sectors or +size{K,M,G,T,P} (14551040-16777215, default 16777215): +350M
+ 
+Created a new partition 3 of type 'Linux' and of size 350 MiB.
+
+Do you want to remove the signature? [Y]es/[N]o: N
+Command (m for help): w
+The partition table has been altered.
+Syncing disks.
+```
+
+<details>
+<summary>
+<strong>After:</strong> df -h /dev/sda3
+
+```shell
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda3       325M  328K  300M   1% /mnt/newdisk
+```
+</details>
