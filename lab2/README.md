@@ -167,7 +167,9 @@ reboot
 
 # 10
 <details>
-<summary>**Before:** df -h /dev/sda3</summary>
+<summary>
+**Before:** df -h /dev/sda3
+</summary>
 
 ```shell
 Filesystem      Size  Used Avail Use% Mounted on
