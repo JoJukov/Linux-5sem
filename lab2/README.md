@@ -481,3 +481,10 @@ lvcreate -L 192M -n logical_vol1 vol_grp1
 ```
 
 </details>   
+
+```shell
+mkfs.ext4 /dev/vol_grp1/logical_vol1
+mount /dev/vol_grp1/logical_vol1 /mnt/supernewdisk
+```
+
+#15
