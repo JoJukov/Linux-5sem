@@ -164,3 +164,13 @@ nano /etc/fstab
 ```shell
 reboot
 ```
+
+# 10
+<details>
+<summary>**Before:** df -h /dev/sda3</summary>
+
+```shell
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda3       275M  328K  254M   1% /mnt/newdisk
+```
+</details>
