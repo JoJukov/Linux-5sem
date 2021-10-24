@@ -404,3 +404,80 @@ vgcreate vol_grp1 /dev/sdb1 /dev/sdb2
 </details>
 
 ```shell   
+lvcreate -L 192M -n logical_vol1 vol_grp1
+```
+
+<details>
+<summary>lvdiplay output</summary>
+
+```shell
+  --- Logical volume ---
+  LV Path                /dev/vol_grp1/logical_vol1
+  LV Name                logical_vol1
+  VG Name                vol_grp1
+  LV UUID                cNhond-oo3L-V5i4-736F-bnPb-3ldo-UBQwLk
+  LV Write Access        read/write
+  LV Creation host, time localhost.localdomain, 2021-10-24 21:24:37 +0300
+  LV Status              available
+  # open                 0
+  LV Size                192.00 MiB
+  Current LE             48
+  Segments               2
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     8192
+  Block device           253:3
+   
+  --- Logical volume ---
+  LV Path                /dev/cl/root
+  LV Name                root
+  VG Name                cl
+  LV UUID                ONhRrF-8ckQ-rfKq-AmW4-Qnlj-3c2k-xq1cvc
+  LV Write Access        read/write
+  LV Creation host, time localhost, 2020-08-28 00:12:13 +0300
+  LV Status              available
+  # open                 1
+  LV Size                <4.20 GiB
+  Current LE             1075
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     8192
+  Block device           253:0
+   
+  --- Logical volume ---
+  LV Path                /dev/cl/swap
+  LV Name                swap
+  VG Name                cl
+  LV UUID                CrR5n1-mSFc-kBoB-xUDE-qaQv-TGt3-eaDVy3
+  LV Write Access        read/write
+  LV Creation host, time localhost, 2020-08-28 00:12:14 +0300
+  LV Status              available
+  # open                 2
+  LV Size                820.00 MiB
+  Current LE             205
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     8192
+  Block device           253:1
+   
+  --- Logical volume ---
+  LV Path                /dev/cl/home
+  LV Name                home
+  VG Name                cl
+  LV UUID                1Bfa7i-7Ykq-r1Sx-4q9X-4mct-YWSt-ZAQQs1
+  LV Write Access        read/write
+  LV Creation host, time localhost, 2020-08-28 00:12:14 +0300
+  LV Status              available
+  # open                 1
+  LV Size                956.00 MiB
+  Current LE             239
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     8192
+  Block device           253:2
+```
+
+</details>   
