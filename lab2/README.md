@@ -287,3 +287,49 @@ Syncing disks.
 mke2fs -O journal_dev - 4096 /dev/sda4
 tune2fs -j -J device=/dev/sda4
 ```
+
+# 13
+
+```shell
+fdisk /dev/sdb
+```
+
+<details>
+<summary>Console output</summary>
+
+```shell
+Welcome to fdisk (util-linux 2.32.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Device does not contain a recognized partition table.
+Created a new DOS disklabel with disk identifier 0xeec1d54c.
+
+Command (m for help): Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p): 
+Partition number (1-4, default 1): 
+First sector (2048-16777215, default 2048): 
+Last sector, +sectors or +size{K,M,G,T,P} (2048-16777215, default 16777215): +100M
+Created a new partition 1 of type 'Linux' and of size 100 MiB.
+
+Command (m for help): Partition type
+   p   primary (1 primary, 0 extended, 3 free)
+   e   extended (container for logical partitions)
+Select (default p): 
+Partition number (2-4, default 2): 
+First sector (206848-16777215, default 206848): 
+Last sector, +sectors or +size{K,M,G,T,P} (206848-16777215, default 16777215): +100M 
+Created a new partition 2 of type 'Linux' and of size 100 MiB.
+
+Command (m for help): The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.
+```
+</details>
+
+```shell
+mkfs.ext4 /dev/sbd1
+mkfs.ext4 /dev/sdb2
+```
