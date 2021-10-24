@@ -502,5 +502,5 @@ nano /etc/fstab
 :arrow-down:
 
 ```shell
-//192.168.43.242/FileShare /mnt/share cifs password=**** defaults 0 0
+//192.168.43.242/FileShare /mnt/share cifs user,rw,password=**** defaults 0 0
 ```
