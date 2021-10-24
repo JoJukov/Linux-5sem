@@ -212,10 +212,14 @@ Command (m for help): w
 The partition table has been altered.
 Syncing disks.
 ```
+e2fsck -f /dev/sda3
+resize2fs /dev/sda3
+
 
 <details>
 <summary>
 <strong>After:</strong> df -h /dev/sda3
+</summary>
 
 ```shell
 Filesystem      Size  Used Avail Use% Mounted on
