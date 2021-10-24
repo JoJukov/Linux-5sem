@@ -151,12 +151,12 @@ mkdir $HOME/newfslink/aboba
 ```
 # 9
 ```shell
-nano /tec/fstab
+nano /etc/fstab
 ```
 :arrow_down:
 
 ```shell
-/dev/sda3 /mnt/newdisk ext4 
+/dev/sda3 /mnt/newdisk ext4 noexec,noatime 0 0 
 ```
 
 :arrow_down:
