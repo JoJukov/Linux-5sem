@@ -566,8 +566,6 @@ mdadm -f /dev/md0 /dev/sdb1
 ```
 </details>
 
-```
-
 ```shell
 # а ничего не поломалось
 ls /mnt/tzz
