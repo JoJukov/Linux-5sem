@@ -510,3 +510,68 @@ nano /etc/fstab
 # Защита
 
    Создать в системе пятый рейд5 массив и симулировать сбой одного из дисков этого массива, восстановить его,  проверить что данные восстановились 
+
+```shell
+fdisk /dev/sdb
+	n
+	1
+	+2G
+	n
+	2
+	+2G
+	n
+	3
+	+2G
+	w
+mdamd --create /dev/md0 --level=5 --raid-devices=3 /dev/sdb1 /dev/sdb2 /dev/sdb3
+```
+
+<details>
+<summary>cat /proc/mdstat</summary>
+
+```shell
+Personalities : [raid6] [raid5] [raid4] 
+md0 : active raid5 sdb3[3] sdb2[1] sdb1[0]
+      4188160 blocks super 1.2 level 5, 512k chunk, algorithm 2 [3/3] [UUU]
+      
+unused devices: <none>
+```
+</details>
+
+```shell
+mkfs.ext4 /dev/md0
+mkdir /mnt/tzzz
+mount /dev/md0 /mnt/tzzz
+touch /mnt/tzzz/test
+# ломаем
+mdadm -f /dev/md0 /dev/sdb1
+````
+<details>
+<summary>dmesg</summary>
+
+```shell
+
+
+
+[   63.296749] True protection against single-disk failure might be compromised.
+[   63.296810] md/raid:md0: device sdb2 operational as raid disk 1
+[   63.296836] md/raid:md0: device sdb1 operational as raid disk 0
+[   63.297274] md/raid:md0: raid level 5 active with 2 out of 3 devices, algorithm 2
+[   63.297339] md0: detected capacity change from 0 to 4288675840
+[   63.298313] md: recovery of RAID array md0
+[   73.687533] md: md0: recovery done.
+[ 2293.191580] EXT4-fs (md0): mounted filesystem with ordered data mode. Opts: (null)
+[ 3596.684732] md/raid:md0: Disk failure on sdb1, disabling device.
+               md/raid:md0: Operation continuing on 2 devices.
+```
+</details>
+
+```
+
+```shell
+# а ничего не поломалось
+ls /mnt/tzz
+
+lost+found
+test
+```
