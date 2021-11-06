@@ -37,3 +37,8 @@ usermod -G g1 u1
 ```shell
 id u1 >> work3.log
 ```
+
+# 9
+```shell
+usermod -G g1 user
+```
