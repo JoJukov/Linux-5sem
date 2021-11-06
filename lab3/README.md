@@ -12,3 +12,8 @@ passwd -S root | tail -n1 | awk '{print $3}' >> work3.log
 ```shell
 cat /etc/group | awk -F: '{printf ("%s, ", $1)}' >> work3.log
 ```
+
+# 4
+```shell
+echo "Be careful!" > /etc/skel/readme.txt
+```
