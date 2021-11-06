@@ -17,3 +17,9 @@ cat /etc/group | awk -F: '{printf ("%s, ", $1)}' >> work3.log
 ```shell
 echo "Be careful!" > /etc/skel/readme.txt
 ```
+
+# 5
+```shell
+useradd u1 -p 12345678
+```
+
