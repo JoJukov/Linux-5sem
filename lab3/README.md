@@ -42,3 +42,8 @@ id u1 >> work3.log
 ```shell
 usermod -G g1 user
 ```
+
+# 10
+```shell
+cat /etc/group | grep "^g1:*" | awk -F: '{print $4}' >> work3.log
+```
