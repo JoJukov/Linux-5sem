@@ -23,3 +23,7 @@ echo "Be careful!" > /etc/skel/readme.txt
 useradd u1 -p 12345678
 ```
 
+# 6
+```shell
+groupadd g1
+```
