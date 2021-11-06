@@ -27,3 +27,8 @@ useradd u1 -p 12345678
 ```shell
 groupadd g1
 ```
+
+# 7
+```shell
+usermod -G g1 u1
+```
