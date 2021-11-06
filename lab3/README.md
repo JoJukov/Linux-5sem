@@ -32,3 +32,8 @@ groupadd g1
 ```shell
 usermod -G g1 u1
 ```
+
+# 8 
+```shell
+id u1 >> work3.log
+```

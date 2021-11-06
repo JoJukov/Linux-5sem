@@ -32,4 +32,6 @@ user u2 has id 1001
 user unbound has id 990
 user setroubleshoot has id 989
 1969-12-31
-dqdqdfdfllsgroot, bin, daemon, sys, adm, tty, disk, lp, mem, kmem, wheel, cdrom, mail, man, dialout, floppy, games, tape, video, ftp, lock, audio, users, nobody, dbus, utmp, utempter, input, kvm, render, systemd-journal, systemd-coredump, systemd-resolve, tss, polkitd, libstoragemgmt, rpc, gluster, ssh_keys, sssd, cockpit-ws, cockpit-wsinstance, printadmin, rpcuser, sshd, chrony, avahi, slocate, rngd, user, g1, u2, unbound, setroubleshoot, 
+root, bin, daemon, sys, adm, tty, disk, lp, mem, kmem, wheel, cdrom, mail, man, dialout, floppy, games, tape, video, ftp, lock, audio, users, nobody, dbus, utmp, utempter, input, kvm, render, systemd-journal, systemd-coredump, systemd-resolve, tss, polkitd, libstoragemgmt, rpc, gluster, ssh_keys, sssd, cockpit-ws, cockpit-wsinstance, printadmin, rpcuser, sshd, chrony, avahi, slocate, rngd, user, g1, u2, unbound, setroubleshoot
+
+uid=1002(u1) gid=1003(u1) groups=1003(u1),1001(g1)
