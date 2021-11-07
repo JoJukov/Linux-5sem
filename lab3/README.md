@@ -97,4 +97,11 @@ chown u1 /home/test14/nano
 chmod u+s /home/test14/nano
 ```
 
+# 17
 
+```shell
+mkdir /home/test15
+echo "ABOBA" > /home/test15/secret_file
+chmod a-r /home/test15
+chmod a+r /home/test15/secret_file
+```
