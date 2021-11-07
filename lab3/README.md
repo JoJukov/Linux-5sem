@@ -88,3 +88,13 @@ chown u1:g1 -R /home/test14
 chmod +t /home/test14
 chmod 222 /home/test14
 ```
+
+# 16
+
+```shell
+cp /usr/bin/nano /home/test14
+chown u1 /home/test14/nano
+chmod u+s /home/test14/nano
+```
+
+
