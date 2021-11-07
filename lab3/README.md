@@ -63,3 +63,19 @@ cp work3.log /home/test13/work3-1.log
 cp work3.log /home/test13/work3-2.log
 ```
 
+# 14
+```shell
+chown -R u1:u2 /home/test13
+chmod -R 640 /home/test13
+```
+
+<details>
+<summary>ls -l /home/test13</summary>
+
+```shell
+total 8
+-rw-r-----. 1 u1 u2 1257 Nov  7 04:22 work3-1.log
+-rw-r-----. 1 u1 u2 1257 Nov  7 04:23 work3-2.log
+```
+
+</details>
