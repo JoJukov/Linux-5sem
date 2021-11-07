@@ -51,3 +51,7 @@ cat /etc/group | grep "^g1:*" | awk -F: '{print $4}' >> work3.log
 ```shell
 usermod -s /usr/bin/mc u1
 ```
+# 12
+```shell
+useradd u2 -p 87654321
+```
