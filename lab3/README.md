@@ -47,3 +47,7 @@ usermod -G g1 user
 ```shell
 cat /etc/group | grep "^g1:*" | awk -F: '{print $4}' >> work3.log
 ```
+# 11
+```shell
+usermod -s /usr/bin/mc u1
+```
