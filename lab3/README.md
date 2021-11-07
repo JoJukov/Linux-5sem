@@ -79,3 +79,12 @@ total 8
 ```
 
 </details>
+
+# 15
+
+```shell
+mkdir /home/test14
+chown u1:g1 -R /home/test14
+chmod +t /home/test14
+chmod 222 /home/test14
+```
