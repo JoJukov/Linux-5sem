@@ -173,3 +173,14 @@ rpmbuild
 ```
 
 </details>
+
+# 9
+
+```shell
+wget https://www.nano-editor.org/dist/v5/nano-5.4.tar.xz
+tar -xvf nano-5.4.tar.xz
+cd nano-5.4
+./configure --prefix=/usr/ --program=new
+make
+makeinstall
+```
