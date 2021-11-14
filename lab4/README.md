@@ -87,3 +87,9 @@ gpgcheck=0
 ```
 
 </details>
+
+# 6
+
+```shell
+yum repolist all > task6.log
+```

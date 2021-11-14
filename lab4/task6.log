@@ -1,0 +1,19 @@
+repo id           repo name                                             status
+appstream         CentOS Linux 8 - AppStream                            enabled
+appstream-source  CentOS Linux 8 - AppStream - Source                   disabled
+baseos            CentOS Linux 8 - BaseOS                               enabled
+baseos-source     CentOS Linux 8 - BaseOS - Source                      disabled
+cr                CentOS Linux 8 - ContinuousRelease                    disabled
+debuginfo         CentOS Linux 8 - Debuginfo                            disabled
+devel             CentOS Linux 8 - Devel WARNING! FOR BUILDROOT USE ONL disabled
+extras            CentOS Linux 8 - Extras                               enabled
+extras-source     CentOS Linux 8 - Extras - Source                      disabled
+fasttrack         CentOS Linux 8 - FastTrack                            disabled
+ha                CentOS Linux 8 - HighAvailability                     disabled
+localrepo         localrepo                                             enabled
+media-appstream   CentOS Linux 8 - Media - AppStream                    disabled
+media-baseos      CentOS Linux 8 - Media - BaseOS                       disabled
+plus              CentOS Linux 8 - Plus                                 disabled
+plus-source       CentOS Linux 8 - Plus - Source                        disabled
+powertools        CentOS Linux 8 - PowerTools                           disabled
+powertools-source CentOS Linux 8 - PowerTools - Source                  disabled
