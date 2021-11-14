@@ -1,0 +1,16 @@
+Last metadata expiration check: 1:21:45 ago on Sun 14 Nov 2021 03:32:39 AM MSK.
+libgcc-8.4.1-1.el8.i686 : GCC version 8 shared support library
+Repo        : baseos
+Matched from:
+Provide    : libgcc = 8.4.1-1.el8
+
+libgcc-8.4.1-1.el8.x86_64 : GCC version 8 shared support library
+Repo        : @System
+Matched from:
+Provide    : libgcc = 8.4.1-1.el8
+
+libgcc-8.4.1-1.el8.x86_64 : GCC version 8 shared support library
+Repo        : baseos
+Matched from:
+Provide    : libgcc = 8.4.1-1.el8
+

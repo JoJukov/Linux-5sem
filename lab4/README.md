@@ -64,3 +64,5 @@ yum list install > task3.log
 
 ```shell
 yum deplist gcc | grep 'dependency' | awk '{print $2}' > task4_1.log
+yum provides libgcc > task4_2.log
+```
