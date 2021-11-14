@@ -190,4 +190,118 @@ makeinstall
 написать скрипт который раз в 10 минут выводит пользователю какое то сообщение, упаковать его в пакет, показать конфигурацию пакета
 
 ## Решение:
+Install tools
+```shell
+yum install rpmdevtools rpmlint
+```
 
+Create package structure
+```shell
+rpmdev-setuptree
+```
+
+Create script
+```shell
+cd ~/rpmbuild
+mkdir amogus-0.0.1 && cd amogus-0.0.1
+nano amogus.sh
+```
+Create package
+```shell
+cd ../
+tar -cf amogus-0.0.1.tar.gz amogus-0.0.1
+mv amogus-0.0.1.tar.gz SOURCES/
+
+cd SPECS
+rpmdev-newspec amogus
+```
+Edit `.spec` file
+```diff
+2c2
+< Version:        0.0.1
+---
+> Version:        
+4,5c4
+< Summary:        Amogus Amogus
+< BuildArch:	noarch
+---
+> Summary:        
+7,8c6,8
+< License:        GPL
+< Source0:        %{name}-%{version}.tar.gz
+---
+> License:        
+> URL:            
+> Source0:        
+10c10,11
+< Requires:       bash
+---
+> BuildRequires:  
+> Requires:       
+13c14
+< Amogus Amogus Amogus
+---
+> 
+16c17,23
+< %setup -q
+---
+> %autosetup
+> 
+> 
+> %build
+> %configure
+> %make_build
+> 
+20,21c27
+< mkdir -p $RPM_BUILD_ROOT/%{_bindir}
+< cp %{name}.sh $RPM_BUILD_ROOT/%{_bindir}
+---
+> %make_install
+23,24d28
+< %clean
+< rm -rf $RPM_BUILD_ROOT
+27c31,33
+< %{_bindir}/%{name}.sh
+---
+> %license add-license-file-here
+> %doc add-docs-here
+> 
+32c38
+< - Aamoogus 
+---
+> - 
+```
+
+Build package
+```shell
+rpmbuild -bb ~/rpmbuild/SPECS/amogus.spec
+```
+
+Install and run package
+```shell
+yum install ~/rpmbuild/RPMS/noarch/amogus-0.0.1-1.el8.noarch.rpm
+amogus.sh
+```
+
+Package info
+```shell
+rpm -qi amogus
+```
+```
+Name        : amogus
+Version     : 0.0.1
+Release     : 1.el8
+Architecture: noarch
+Install Date: Sun 14 Nov 2021 09:31:27 AM MSK
+Group       : Unspecified
+Size        : 74
+License     : GPL
+Signature   : (none)
+Source RPM  : amogus-0.0.1-1.el8.src.rpm
+Build Date  : Sun 14 Nov 2021 09:30:05 AM MSK
+Build Host  : localhost
+Relocations : (not relocatable)
+Summary     : Amogus Amogus
+Description :
+Amogus Amogus Amogus
+```
