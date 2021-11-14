@@ -93,3 +93,44 @@ gpgcheck=0
 ```shell
 yum repolist all > task6.log
 ```
+
+# 7
+
+```shell
+cd /etc/yum.repos.d
+ls | xargs -i mv {} {}.aboba
+mv localrepo.repo.aboba localrepo.repo
+yum update
+```
+
+<details>
+<summary>output</summary>
+
+```shell
+Last metadata expiration check: 0:19:13 ago on Sun 14 Nov 2021 06:29:55 AM MSK.
+Dependencies resolved.
+Nothing to do.
+Complete!
+```
+
+</details>
+
+```shell
+yum list available
+```
+
+<details>
+<summary>output</summary>
+
+```shell
+Last metadata expiration check: 0:20:43 ago on Sun 14 Nov 2021 06:29:55 AM MSK.
+Available Packages
+checkinstall.x86_64                   1.6.2-3.el6.1                    localrepo
+```
+
+</details>
+
+```shell
+yum install checkinstall
+for f in $(ls); do mv "$f" "${f%.aboba}"; done
+```
