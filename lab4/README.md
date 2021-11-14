@@ -134,3 +134,42 @@ checkinstall.x86_64                   1.6.2-3.el6.1                    localrepo
 yum install checkinstall
 for f in $(ls); do mv "$f" "${f%.aboba}"; done
 ```
+# 8
+
+```shell
+cp fortunes-ru _1.52-2_all.deb $HOME
+```
+
+<details>
+<summary>поставим алиен</summary>
+
+```shell
+wget -c https://sourceforge.net/projects/alien-pkg-convert/files/release/alien_8.95.tar.xz
+tar xf alient_8.95.tar.xz
+dnf install perl
+cd alien_8.95.tar.xz
+perl Makefile.PL; make; make install
+```
+
+</details>
+
+```shell
+cd $HOME
+alien --to-rpm fortunes-ru_1.52-2_all.deb
+rpm -i --replacefiles fortunes-ru-1.52-3.noarch.rpm
+```
+
+<details>
+<summary>ls</summary>
+
+```shell
+anaconda-ks.cfg
+bastet
+fortunes-ru_1.52-2_all.deb
+fortunes-ru-1.52-3.noarch.rpm
+Linux-5sem
+localrepo
+rpmbuild
+```
+
+</details>
