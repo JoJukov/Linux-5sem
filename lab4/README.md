@@ -9,3 +9,5 @@ yum group install  'Development Tools'
 ```shell
 mkdir bastet
 tar -xvzf bastet-0.43.tgz -C bastet
+yum install boost-devel ncutses-devel
+
