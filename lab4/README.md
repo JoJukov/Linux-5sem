@@ -59,3 +59,8 @@ make install
 ```shell
 yum list install > task3.log
 ```
+
+# 4
+
+```shell
+yum deplist gcc | grep 'dependency' | awk '{print $2}' > task4_1.log
