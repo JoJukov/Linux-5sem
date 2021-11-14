@@ -53,3 +53,9 @@ install:
 ```shell
 make install
 ```
+
+# 3
+
+```shell
+yum list install > task3.log
+```
