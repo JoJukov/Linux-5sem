@@ -21,3 +21,7 @@ clean:
 
 mrproper: clean
 	rm -f *~
+
+install:
+	cp $(PROGNAME) /usr/bin
+	chmod a+x /usr/bin/$(PROGNAME)

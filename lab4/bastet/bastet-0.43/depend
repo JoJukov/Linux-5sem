@@ -1,0 +1,11 @@
+Ui.o: Ui.cpp Ui.hpp Well.hpp Block.hpp BlockPosition.hpp BlockChooser.hpp \
+ Config.hpp BastetBlockChooser.hpp
+main.o: main.cpp Ui.hpp Well.hpp Block.hpp BlockPosition.hpp \
+ BlockChooser.hpp Config.hpp BastetBlockChooser.hpp
+Block.o: Block.cpp Block.hpp
+Well.o: Well.cpp Well.hpp Block.hpp BlockPosition.hpp
+BlockPosition.o: BlockPosition.cpp BlockPosition.hpp Block.hpp Well.hpp
+Config.o: Config.cpp Config.hpp
+BlockChooser.o: BlockChooser.cpp BlockChooser.hpp Block.hpp
+BastetBlockChooser.o: BastetBlockChooser.cpp BastetBlockChooser.hpp \
+ BlockChooser.hpp Block.hpp Well.hpp BlockPosition.hpp
