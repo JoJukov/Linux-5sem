@@ -72,3 +72,18 @@ repoquery -q --installed -whatrequires libgcc > task4_2.log
 ```shell
 mkdir $HOME/localrepo
 cp checkinstall-1.6.2-3.el6.1.x86_64.rpm $HOME/localrepo
+createrepo $HOME/localrepo
+```
+
+<details>
+<summary>создадим и запишем в файл /etc/yum.repos.d/localrepo.repo</summary>
+
+```shell
+[localrepo]
+name=localrepo
+baseurl=file://root/localrepo/
+enabled=1
+gpgcheck=0
+```
+
+</details>
