@@ -66,3 +66,9 @@ yum list install > task3.log
 yum deplist gcc | grep 'dependency' | awk '{print $2}' > task4_1.log
 repoquery -q --installed -whatrequires libgcc > task4_2.log
 ```
+
+# 5
+
+```shell
+mkdir $HOME/localrepo
+cp checkinstall-1.6.2-3.el6.1.x86_64.rpm $HOME/localrepo
