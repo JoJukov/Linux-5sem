@@ -218,58 +218,58 @@ rpmdev-newspec amogus
 Edit `.spec` file
 ```diff
 2c2
-< Version:        0.0.1
+< Version:        
 ---
-> Version:        
-4,5c4
-< Summary:        Amogus Amogus
-< BuildArch:	noarch
+> Version:        0.0.1
+4c4,5
+< Summary:        
 ---
-> Summary:        
-7,8c6,8
-< License:        GPL
-< Source0:        %{name}-%{version}.tar.gz
+> Summary:        Amogus Amogus
+> BuildArch:	noarch
+6,8c7,8
+< License:        
+< URL:            
+< Source0:        
 ---
-> License:        
-> URL:            
-> Source0:        
-10c10,11
-< Requires:       bash
+> License:        GPL
+> Source0:        %{name}-%{version}.tar.gz
+10,11c10
+< BuildRequires:  
+< Requires:       
 ---
-> BuildRequires:  
-> Requires:       
-13c14
-< Amogus Amogus Amogus
+> Requires:       bash
+14c13
+< 
 ---
-> 
-16c17,23
-< %setup -q
+> Amogus Amogus Amogus
+17,23c16
+< %autosetup
+< 
+< 
+< %build
+< %configure
+< %make_build
+< 
 ---
-> %autosetup
-> 
-> 
-> %build
-> %configure
-> %make_build
-> 
-20,21c27
-< mkdir -p $RPM_BUILD_ROOT/%{_bindir}
-< cp %{name}.sh $RPM_BUILD_ROOT/%{_bindir}
+> %setup -q
+27c20,21
+< %make_install
 ---
-> %make_install
-23,24d28
-< %clean
-< rm -rf $RPM_BUILD_ROOT
-27c31,33
-< %{_bindir}/%{name}.sh
+> mkdir -p $RPM_BUILD_ROOT/%{_bindir}
+> cp %{name}.sh $RPM_BUILD_ROOT/%{_bindir}
+28a23,24
+> %clean
+> rm -rf $RPM_BUILD_ROOT
+31,33c27
+< %license add-license-file-here
+< %doc add-docs-here
+< 
 ---
-> %license add-license-file-here
-> %doc add-docs-here
-> 
-32c38
-< - Aamoogus 
+> %{_bindir}/%{name}.sh
+38c32
+< - 
 ---
-> - 
+> - Aamoogus 
 ```
 
 Build package
