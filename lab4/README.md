@@ -206,6 +206,15 @@ cd ~/rpmbuild
 mkdir amogus-0.0.1 && cd amogus-0.0.1
 nano amogus.sh
 ```
+```bash
+#!/usr/bin/env bash
+
+while true; do
+	echo "Amogus"
+	sleep $((60 * 10))
+done &
+```
+
 Create package
 ```shell
 cd ../
